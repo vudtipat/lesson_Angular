@@ -1,0 +1,32 @@
+Lesson 1
+    Structure
+        -   first-my-app (to create new angular app)
+            1) to create new angular app by using cmd `ng new appname`
+            2) to run app by using cmd `ng serve` or `ng serve -o` to open brownser
+        -   edit-first-app (to edit some thing from first-my-app)
+            1) edit first-my-app by change in app.component.html file
+            2) try to binding property of component by using ngModel
+        -   adding-bootstrap
+            1) create new angular app 
+            2) install bootstrap lib to project
+            3) add bootstrap to app
+
+Lacture
+    1) การ Create property ของ component ทำได้โดยการเพิ่มในส่วน export ของ class ของ component นั้นๆ เช่น 
+        export class AppComponent {
+            name = 'tum';
+            lastname = "saishana";
+        }
+    2) การเรียกใช้ property ของ component นั้นๆ จะใช้ {{ propName }} เช่น <p>{{name}}</p>
+    3) การ binding property กับ element จะใช้ [(ngModel)]
+        1) import { FormsModule } from '@angular/forms'; ใน app.module.ts
+        2) import  FormsModule ในส่วนของ NgModule ใน app.module.ts 
+        3) binding กับ element โดยใช้ [(ngModel)] = "propertyName"
+    4) install bootstrap และการเรียกใช้
+        1) install bootstrap ด้วย cmd `npm install --save bootstrap@3`
+        2) เพิ่ม bootstrap ลงใน angular.json ในส่วนของ style "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+        
