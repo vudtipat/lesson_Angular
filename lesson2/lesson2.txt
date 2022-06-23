@@ -1,0 +1,49 @@
+Lesson 2
+    -   create-new-component(create new component and using it and create new component from command)
+    -   assignment1 (create new 2 component and use it)
+    -   data-binding (binding data String Interpolation, Property Binding, Event Binding)
+    -   assignment2 (combine all method binding)
+    -   ifelseview (if - else to render Element)
+
+Lecture
+    1)  การสร้าง Component
+        1) สร้าง Directory
+        2) สร้าง Component file 
+            -   newComponent.component.ts
+            -   newComponent.component.html
+        3)  ในส่วน newComponent.component.ts 
+            import { Component } from "@angular/core";
+
+            @Component({
+                selector: 'html tag ที่ใช้แทน component',
+                templateUrl: 'html filr location',
+                styleUrls: 'css file location'
+            })
+
+            export class NewComponent {
+                propName = "";
+            }
+        4) ในส่วน newComponent.component.html คือ html code ของ angular 
+
+    2)  การใช้งาน Component หากเป็น View Component สามารถใช้ html tag ที่ประกาศในส่วนของ selector
+    3)  การสร้าง Component โดยใช้ ng client `ng generate component componentName`
+    4)  Data Binding 
+        1)  String Interpolation
+            คือการใช้งานผ่าน propname โดยการเรียกใช้ {{ propname }}
+        2)  Property Binding (prop ของ Element ไม่ใช่ Prop ของ Class) [propName]=Attribute
+            <button [disable]="Disable"></button>
+        3)  Event Binding
+            (click)=func()
+        4) Passing and using data with event binding(เราสามารถใช้ ngModel ในการ Binding แบบนี้ได้)
+            (input)="funcHander($event)" -> Binding
+            การเรียกใช้ event.target.value; -> เรียกใช้ภายใน Function
+    5)  if-else 
+        if : *ngIf="Boolean ; else Something"
+        else :  <ng-template #Something>
+                    <element>
+                </ng-template>
+    6)  dynamic style   [ngStyle]="{backgroundColor: }"
+    7)  เราสามารถทำ Dynamic css class ได้โดยใช้ [ngClass]=" styleclassname : condition"
+    8)  เราสามารถทำ Loop List Element ได้โดยใช้ *ngFor="Loop" เช่น *ngFor="let i of lst" และเราสามารถเข้าถึงตำแหน่งได้โดย *ngFor="let i of lst;let ind = index"
+
+            

@@ -1,0 +1,20 @@
+<p>If - Else Rederer</p>
+<input [(ngModel)]="var1">
+<hr>
+<p *ngIf="var1 == 'true'">True Condition</p>
+<hr>
+<p *ngIf="var1 == 'true'; else ElseCondition ">True Condtion</p>
+<ng-template #ElseCondition>
+  <p>False Condition</p>
+</ng-template>
+<hr>
+<p [ngStyle]="{backgroundColor: bool? 'green' : 'red' }">DDDDDDDDDDD</p>
+<button (click)="bool = !bool">click</button>
+<hr>
+<p [ngClass]="{ colorblue : true === true }">TESTTTTTT</p>
+<hr>
+<input (input)="onChange($event)">
+<button (click)="onclick(var2)">Click</button>
+<div *ngFor="let i of lst;let ind = index">
+  <p>{{i}}    {{ind}}</p>
+</div>
